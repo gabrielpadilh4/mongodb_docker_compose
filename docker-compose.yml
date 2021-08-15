@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  db:
+    image: mongo
+    container_name: db
+    restart: always
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=gabriel
+      - MONGO_INITDB_ROOT_PASSWORD=gabriel
+    ports: 
+      - "27017:27017"
+    volumes: 
+      - /home/gabrielpadilha/study/Docker/Volumes/MongoDB:/data/db
